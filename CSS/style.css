@@ -1,0 +1,17 @@
+/* Logo Font */
+@font-face {
+    font-family: norse-bold;
+    src: url("../Assets/fonts/Norse-Bold.woff2");
+}
+
+/* Content Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Global Styling */
+:root {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
