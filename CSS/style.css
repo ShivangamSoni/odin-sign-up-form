@@ -8,10 +8,209 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 /* Global Styling */
-:root {
-    font-family: 'Roboto', sans-serif;
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+:root {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Main */
+.main {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* Logo Section --Start-- */
+.logoContainer {
+    background-image: url("../Assets/images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 40%;
+    position: relative;
+}
+
+.logo {
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    padding: 5px;
+}
+
+.logo > img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo > h1 {
+    font-family: norse-bold;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.image-credit {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: .8rem;
+    color: #fff;
+}
+
+.image-credit > a {
+    color: #fff;
+}
+/* Logo Section --End-- */
+
+/* Content Section --Start-- */
+.content{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background-color: #f9fafb;
+    padding: 5% 0 0;
+}
+
+.info{
+    padding: 0 50px;
+    width: min(700px, 100%);
+}
+
+.info > p {
+    font-weight: bold;
+}
+.info > p + p {
+    margin-top: 20px;
+}
+
+/* Form --Start-- */
+.form{
+    margin: 50px 0;
+}
+
+.formFields {
+    background-color: #fff;
+    padding: 20px 50px;
+    box-shadow: 0 3px 5px 0 rgb(0, 0, 0, .3);
+}
+
+.form-heading {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.form-fieldGroup {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 10px 0;
+    width: min(700px, 100%);
+}
+
+.form-field {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    line-height: 1;
+}
+
+.form-field + .form-field {
+    margin-left: 10px;
+}
+
+.form-field > .label {
+    text-transform: uppercase;
+    font-size: .7rem;
+}
+
+.form-field > input  {
+    appearance: none;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: .5rem;
+    margin: 2px 0;
+    transition: all 250ms ease-in-out;
+}
+
+.form-field > input:focus  {
+    outline: 2px solid dodgerblue;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+}
+
+.form-field > input:invalid  {
+    outline: 2px solid #f00;
+}
+
+.form-field > .errorMsg {
+    font-size: .7rem;
+    color: hsl(0, 100%, 40%);
+    margin-top: 3px;
+    transform-origin: top left;
+    transform: scaleX(0);
+    opacity: 0;
+    transition: transform 350ms ease-out, opacity 200ms 350ms linear;
+}
+
+
+.form-field > .errorMsg::before {
+    content: "* ";
+}
+
+.form-field > input.error + .errorMsg {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+.formSubmit {
+    padding: 0 50px;
+    margin-top: 30px;
+}
+
+.formSubmit > button {
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: .5rem 2rem;
+    border-radius: 3px;
+    background-color: #596D48;
+    margin-bottom: 15px;
+}
+
+.form-info {
+    font-size: .8rem;
+}
+
+.form-info > a {
+    outline: none;
+    color: #596D48;
+    text-decoration: none;
+}
+/* Form --End-- */
+/* Content Section --End-- */
